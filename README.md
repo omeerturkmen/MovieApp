@@ -33,12 +33,14 @@ By clicking on any movie, you can access the detail screen, where you will find 
 <img align="left" src="https://github.com/omeerturkmen/MovieApp/blob/master/readmeImages/search_screen_default.png" width="250" height="530"/>
 <img align="left" src="https://github.com/omeerturkmen/MovieApp/blob/master/readmeImages/search_screen_searching.png" width="250" height="530"/>
 <img align="left" src="https://github.com/omeerturkmen/MovieApp/blob/master/readmeImages/details_screen.png" width="250" height="530"/></p>
+
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 
 ## Architecture 
 
 <p align="left">
-  <img src="https://github.com/omeerturkmen/MovieApp/blob/master/readmeImages/mvvm_flow_uistate.png" alt="Architecture" width="800" height="400" />
+  <img  src="https://github.com/omeerturkmen/MovieApp/blob/master/readmeImages/mvvm_flow_uistate.png" alt="Architecture" width="800" height="400" />
 </p>
 
