@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.example.myapplication2.data.model.MovieBriefInfoModel" />
+
+        <variable
+            name="rating"
+            type="String" />
+
+        <variable
+            name="date"
+            type="String" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardPop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_140"
+        android:layout_marginHorizontal="@dimen/dp_6"
+        android:layout_marginVertical="@dimen/dp_6"
+        android:backgroundTint="@color/light_black"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivImage"
+                setPhoto="@{data.poster_path}"
+                android:layout_width="@dimen/dp_92"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="@dimen/dp_8"
+                android:layout_marginStart="@dimen/dp_8"
+                android:elevation="@dimen/dp_10"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:shapeAppearanceOverlay="@style/roundedCorner"
+                tools:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="@dimen/dp_200"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_21"
+                android:layout_marginTop="@dimen/dp_12"
+                android:ellipsize="end"
+                android:text="@{data.title}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/ivImage"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Gora" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_21"
+                android:layout_marginEnd="@dimen/dp_12"
+                android:elevation="@dimen/dp_2"
+                android:text="@{date}"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/tvRating"
+                app:layout_constraintStart_toEndOf="@id/tvRating"
+                app:layout_constraintTop_toTopOf="@id/tvRating" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivStar"
+                android:layout_width="@dimen/dp_21"
+                android:layout_height="@dimen/dp_21"
+                android:layout_marginBottom="@dimen/dp_12"
+                android:background="@drawable/star_rating"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvTitle" />
+
+            <TextView
+                android:id="@+id/tvRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_4"
+                android:text="@{rating}"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/ivStar"
+                app:layout_constraintStart_toEndOf="@id/ivStar"
+                app:layout_constraintTop_toTopOf="@id/ivStar"
+                tools:text="8.1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivGoForDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:src="@drawable/ic_arrow_forward"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

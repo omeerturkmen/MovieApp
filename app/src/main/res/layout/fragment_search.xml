@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="searchControl"
+            type="Boolean" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_black"
+        tools:context=".ui.search.SearchFragment">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_24"
+            android:layout_marginEnd="@dimen/dp_60"
+            android:background="@drawable/search_view_background"
+            android:elevation="@dimen/dp_6"
+            android:inputType="textCapSentences"
+            app:iconifiedByDefault="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:queryHint="@string/searchMovie"
+            app:searchIcon="@null" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginStart="@dimen/dp_8"
+            android:background="@drawable/search_view_background"
+            android:scaleType="center"
+            android:src="@drawable/ic_search"
+            app:layout_constraintBottom_toBottomOf="@id/searchView"
+            app:layout_constraintStart_toEndOf="@id/searchView"
+            app:layout_constraintTop_toTopOf="@id/searchView" />
+
+        <TextView
+            android:id="@+id/tvLineTrending"
+            android:layout_width="@dimen/dp_4"
+            android:layout_height="@dimen/dp_24"
+            android:layout_marginStart="@dimen/dp_8"
+            android:background="@color/light_yellow"
+            android:visibility="@{searchControl ? View.GONE : View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="@id/tvTrending"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvTrending" />
+
+        <TextView
+            android:id="@+id/tvTrending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_21"
+            android:layout_marginTop="@dimen/dp_24"
+            android:text="@string/trending"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24"
+            android:textStyle="bold"
+            android:visibility="@{searchControl ? View.GONE : View.VISIBLE}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchView" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivTrending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_4"
+            android:background="@drawable/ic_trending"
+            android:visibility="@{searchControl ? View.GONE : View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="@id/tvTrending"
+            app:layout_constraintStart_toEndOf="@id/tvTrending"
+            app:layout_constraintTop_toTopOf="@id/tvTrending" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerTrending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:elevation="@dimen/dp_2"
+            android:orientation="horizontal"
+            android:visibility="@{searchControl ? View.GONE : View.VISIBLE}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tvTrending"
+            tools:listitem="@layout/item_trending" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_marginTop="@dimen/dp_24"
+            android:visibility="@{searchControl ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchView"
+            tools:listitem="@layout/item_search" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

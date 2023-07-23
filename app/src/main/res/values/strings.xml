@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Application2</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="nowPlaying">Now Playing</string>
+    <string name="releases">Releases</string>
+    <string name="releaseDate">Release Date</string>
+    <string name="popularMovie">Popular Movies</string>
+    <string name="topRatedMovie">Top Rated Movies</string>
+    <string name="searchMovie">Search, Explore Movies</string>
+    <string name="trending">Trending</string>
+    <string name="overview">Overview</string>
+    <string name="search">Search</string>
+    <string name="home">Home</string>
+
+
+</resources>

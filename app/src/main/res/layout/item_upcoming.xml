@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.example.myapplication2.data.model.MovieBriefInfoModel" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardUpcoming"
+        android:layout_width="@dimen/dp_180"
+        android:layout_height="@dimen/dp_240"
+        android:layout_margin="@dimen/dp_6"
+        android:elevation="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_12">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivUpcoming"
+                setPhoto="@{data.poster_path}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tvMovieTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_32"
+                android:background="@color/dark_alpha"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/dp_8"
+                android:text="@{data.title}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBottom_toTopOf="@id/tvDate" />
+
+            <TextView
+                android:id="@+id/tvRelease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_4"
+                android:elevation="@dimen/dp_2"
+                android:text="@string/releases"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/tvDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvDate" />
+
+            <TextView
+                android:id="@+id/tvLine"
+                android:layout_width="@dimen/dp_4"
+                android:layout_height="@dimen/dp_18"
+                android:layout_marginStart="@dimen/dp_6"
+                android:background="@color/light_yellow"
+                android:elevation="@dimen/dp_2"
+                app:layout_constraintBottom_toBottomOf="@id/tvRelease"
+                app:layout_constraintStart_toEndOf="@id/tvRelease"
+                app:layout_constraintTop_toTopOf="@id/tvRelease" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_32"
+                android:background="@color/dark_alpha"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingTop="@dimen/dp_4"
+                android:paddingEnd="@dimen/dp_21"
+                android:text="@{data.release_date}"
+                android:textAlignment="textEnd"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

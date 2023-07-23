@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_black"
+        tools:context=".ui.upcoming.ReleasesFragment">
+
+        <TextView
+            android:id="@+id/tvLineUpcoming"
+            android:layout_width="@dimen/dp_4"
+            android:layout_height="@dimen/dp_24"
+            android:layout_marginStart="@dimen/dp_8"
+            android:background="@color/light_yellow"
+            app:layout_constraintBottom_toBottomOf="@id/tvUpcoming"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvUpcoming" />
+
+        <TextView
+            android:id="@+id/tvUpcoming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_21"
+            android:layout_marginTop="@dimen/dp_48"
+            android:text="@string/upcoming"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/upcoming" />
+
+        <TextView
+            android:id="@+id/recyclerUpcomingUpperLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_2"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/recyclerUpcoming" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerUpcoming"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_21"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tvUpcoming"
+            tools:listitem="@layout/item_upcoming" />
+
+        <TextView
+            android:id="@+id/recyclerUpcomingUnderLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_2"
+            android:layout_marginTop="@dimen/dp_6"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/recyclerUpcoming" />
+
+        <TextView
+            android:id="@+id/tvLineNowPlaying"
+            android:layout_width="@dimen/dp_4"
+            android:layout_height="@dimen/dp_24"
+            android:layout_marginStart="@dimen/dp_8"
+            android:background="@color/light_yellow"
+            app:layout_constraintBottom_toBottomOf="@id/tvNowPlaying"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvNowPlaying" />
+
+        <TextView
+            android:id="@+id/tvNowPlaying"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_21"
+            android:layout_marginTop="@dimen/dp_18"
+            android:text="@string/nowPlaying"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerUpcoming" />
+
+        <TextView
+            android:id="@+id/recyclerNowPlayingUpperLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_2"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/recyclerNowPlaying" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerNowPlaying"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_20"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tvNowPlaying"
+            tools:listitem="@layout/item_now_playing" />
+
+        <TextView
+            android:id="@+id/recyclerNowPlayingUnderLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_2"
+            android:layout_marginTop="@dimen/dp_4"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/recyclerNowPlaying" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

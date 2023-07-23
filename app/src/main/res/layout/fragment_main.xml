@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_black"
+        tools:context=".ui.main.MainFragment">
+
+        <TextView
+            android:id="@+id/tvLineTop"
+            android:layout_width="@dimen/dp_4"
+            android:layout_height="@dimen/dp_24"
+            android:layout_marginStart="@dimen/dp_8"
+            android:background="@color/light_yellow"
+            app:layout_constraintBottom_toBottomOf="@id/tvTopRated"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvTopRated" />
+
+        <TextView
+            android:id="@+id/tvTopRated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_21"
+            android:layout_marginTop="@dimen/dp_12"
+            android:text="@string/topRatedMovie"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerTopRated"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_216"
+            android:layout_marginTop="@dimen/dp_12"
+            app:layout_constraintTop_toBottomOf="@id/tvTopRated"
+            tools:listitem="@layout/item_top_rated" />
+
+        <TextView
+            android:id="@+id/tvLine"
+            android:layout_width="@dimen/dp_4"
+            android:layout_height="@dimen/dp_24"
+            android:layout_marginStart="@dimen/dp_8"
+            android:background="@color/light_yellow"
+            app:layout_constraintBottom_toBottomOf="@id/tvPopular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvPopular" />
+
+        <TextView
+            android:id="@+id/tvPopular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_21"
+            android:layout_marginTop="@dimen/dp_12"
+            android:text="@string/popularMovie"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerTopRated" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPopular"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@color/light_black"
+            android:elevation="@dimen/dp_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPopular"
+            tools:listitem="@layout/item_popular" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
