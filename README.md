@@ -7,7 +7,10 @@ By clicking on any movie, you can access the detail screen, where you will find 
 <br><br>
 
 ## Preview App
-![preview-app](https://github.com/mertkus1/SearchMovieApp/blob/master/readmeImages/search.gif) 
+<p align="left">
+  <img src="https://github.com/omeerturkmen/MovieApp/blob/master/readmeImages/search.gif" alt="Preview App" width="350" height="700" />
+</p>
+
 ## Libraries & Tools 🛠️
 
 - [Kotlin](https://kotlinlang.org/docs/home.html)
@@ -31,3 +34,7 @@ By clicking on any movie, you can access the detail screen, where you will find 
 <img align="left" src="https://github.com/omeerturkmen/MovieApp/blob/master/readmeImages/search_screen_searching.png" width="250" height="530"/>
 <img align="left" src="https://github.com/omeerturkmen/MovieApp/blob/master/readmeImages/details_screen.png" width="250" height="530"/></p>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+## Architecture
+![architecture](https://github.com/omeerturkmen/MovieApp/blob/master/readmeImages/architecture.png)
