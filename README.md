@@ -28,11 +28,13 @@ By clicking on any movie, you can access the detail screen, where you will find 
 
 ## Screenshots 📱
 
+<p align="left">
+  
 <img align="left" src="https://github.com/omeerturkmen/MovieApp/blob/master/readmeImages/home_screen.png" width="250" height="530" />
 <img align="left" src="https://github.com/omeerturkmen/MovieApp/blob/master/readmeImages/releases_screen.png"  width="250" height="530" />
 <img align="left" src="https://github.com/omeerturkmen/MovieApp/blob/master/readmeImages/search_screen_default.png" width="250" height="530"/>
 <img align="left" src="https://github.com/omeerturkmen/MovieApp/blob/master/readmeImages/search_screen_searching.png" width="250" height="530"/>
-<img align="left" src="https://github.com/omeerturkmen/MovieApp/blob/master/readmeImages/details_screen.png" width="250" height="530"/></p>
+<img align="left" src="https://github.com/omeerturkmen/MovieApp/blob/master/readmeImages/details_screen.png" width="250" height="530"/> </p>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
