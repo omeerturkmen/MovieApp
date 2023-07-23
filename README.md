@@ -6,7 +6,7 @@ Additionally, the application features sections for top-rated, popular, trending
 By clicking on any movie, you can access the detail screen, where you will find information such as the release date, rating, runtime, tagline, and overview of the movie.
 <br><br>
 
-## Preview App
+## App's Search Preview
 <p align="left">
   <img src="https://github.com/omeerturkmen/MovieApp/blob/master/readmeImages/search.gif" alt="Preview App" width="325" height="650" />
 </p>
