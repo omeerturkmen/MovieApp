@@ -8,7 +8,7 @@ By clicking on any movie, you can access the detail screen, where you will find 
 
 ## App's Search Preview
 <p align="left">
-  <img src="https://github.com/omeerturkmen/MovieApp/blob/master/readmeImages/search.gif" alt="Preview App" width="325" height="650" />
+  <img src="https://github.com/omeerturkmen/MovieApp/blob/master/readmeImages/search.gif" alt="Preview App" width="325" height="680" />
 </p>
 
 ## Libraries & Tools 🛠️
